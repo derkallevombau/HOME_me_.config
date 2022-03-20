@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal in this directory</name>
+	<unique-id>1575817270412300-1</unique-id>
+	<command>gnome-terminal --working-directory=%f</command>
+	<description>Open Terminal in the selected directory</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>org.gnome.Terminal</icon>
+	<name>Open Terminal in parent directory</name>
+	<unique-id>1579562073542467-1</unique-id>
+	<command>gnome-terminal --working-directory=%d</command>
+	<description>Open Terminal in the directory containing the selected file or directory</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>system-file-manager</icon>
+	<name>Open in New Window as root</name>
+	<unique-id>1636053128457399-1</unique-id>
+	<command>pkexec thunar %f</command>
+	<description>Open selected directory in new window as root</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>
