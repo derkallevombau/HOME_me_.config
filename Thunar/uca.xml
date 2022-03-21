@@ -12,10 +12,10 @@
 </action>
 <action>
 	<icon>org.gnome.Terminal</icon>
-	<name>Open Terminal in parent directory</name>
+	<name>Open terminal in parent directory</name>
 	<unique-id>1579562073542467-1</unique-id>
 	<command>gnome-terminal --working-directory=%d</command>
-	<description>Open Terminal in the directory containing the selected file or directory</description>
+	<description>Open terminal in the directory containing the selected file or directory</description>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
@@ -33,5 +33,14 @@
 	<description>Open selected directory in new window as root</description>
 	<patterns>*</patterns>
 	<directories/>
+</action>
+<action>
+	<icon>text-x-script</icon>
+	<name>Execute in terminal</name>
+	<unique-id>1647813350907277-1</unique-id>
+	<command>gnome-terminal -- bash -c &apos;[[ ! -x %f ]] &amp;&amp; echo -e &quot;\e[1m\e[91mError: \e[0m\e[4m\e[91m%f\e[0m\e[91m is not executable.\e[0m&quot; || &quot;%f&quot;; echo -en &quot;\n\e[1m\e[97mPress any key to close the window.&quot;; read -n 1&apos;</command>
+	<description>Execute selected file in terminal</description>
+	<patterns>*</patterns>
+	<other-files/>
 </action>
 </actions>
